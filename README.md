@@ -1,4 +1,4 @@
-# Stabilizer-Ground-states
+# Stabilizer-Ground-States
 
 This is the GitHub repo for "Stabilizer ground states: theory, algorithms and applications" by Jiace Sun, Lixue Cheng, and Shi-xin Zhang. [Paper Link](https://arxiv.org/abs/2403.08441)
 
