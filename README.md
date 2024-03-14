@@ -1,6 +1,6 @@
-# Clifford-gs-sparse
+# Stabilizer-Ground-states
 
-This is the GitHub repo for "Stabilizer ground states: theory, algorithms and applications" by Jiace Sun, Shi-xin Zhang, and Lixue Cheng. [Paper Link](https://arxiv.org/abs/2403.08441)
+This is the GitHub repo for "Stabilizer ground states: theory, algorithms and applications" by Jiace Sun, Lixue Cheng, and Shi-xin Zhang. [Paper Link](https://arxiv.org/abs/2403.08441)
 
 ## Usage
 
@@ -38,4 +38,4 @@ n = number of qubits for finite Hamiltonians, or period for periodic Hamiltonian
 
 k = locality of Hamiltonian (i.e. each Pauli must be in site m to m + k - 1 for some m)
 
-## Reproduction of results in the paper
+See details in example
