@@ -5,6 +5,7 @@ This is the GitHub repo for "Stabilizer ground states: theory, algorithms and ap
 ## Usage
 
 ### python (for demonstration)
+Three scripts are given for the exact stabilizer ground state of (1) general finite Hamiltonians, (2) 1D local finite Hamiltonians, (3) 1D local infinite periodic Hamiltonians.
 ```
 cd py
 python sparse.py path_to_lib/example/hamiltonian_finite.txt
