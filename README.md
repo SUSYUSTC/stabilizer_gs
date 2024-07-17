@@ -39,4 +39,14 @@ n = number of qubits for finite Hamiltonians, or period for periodic Hamiltonian
 
 k = locality of Hamiltonian (i.e. each Pauli must be in site m to m + k - 1 for some m)
 
-See details in example
+See details in [example](example)
+
+## Cite us
+```
+@article{sun2024stabilizer,
+  title={Stabilizer ground states: theory, algorithms and applications},
+  author={Sun, Jiace and Cheng, Lixue and Zhang, Shi-Xin},
+  journal={arXiv preprint arXiv:2403.08441},
+  year={2024}
+}
+```
