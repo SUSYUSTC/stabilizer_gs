@@ -1,6 +1,7 @@
 import numpy as np
 from state import Hamiltonian, StateMachinePeriodic, generate_Sright_periodic
 
+
 max_float = 1e100
 cmax = 10  # memory amount to malloc, should >= c, otherwise may cause MemoryError
 H_periodic = Hamiltonian.from_file_periodic("../hamiltonian_periodic.txt", cmax)

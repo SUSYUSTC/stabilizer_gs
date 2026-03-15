@@ -1,7 +1,7 @@
 import numpy as np
 from utils import zerosint2, randomint2
 from functools import reduce
-
+import hashlib
 
 class Pauli:
     str_mapping = {
@@ -110,7 +110,7 @@ class Pauli:
         return cls(Z, X, begin=begin)
 
     def to_string(self):
-        array4 = np.array(['I', 'X', 'Z', 'Y'])[self.array4]
+        array4 = np.array(['_', 'X', 'Z', 'Y'])[self.array4]
         phase = np.array(['+', '-'])[(1 - self.phase) // 2]
         title = f'qubit {self.begin}-{self.end-1} size {self.batch_size} '
         if np.prod(self.batch_size) == 0:
@@ -125,10 +125,14 @@ class Pauli:
         return str(self)
 
     def hash(self, add_position=True):
+        m = hashlib.sha256()
+        m.update(self.z.tobytes())
+        m.update(self.x.tobytes())
         if add_position:
-            return hash((self.z.tobytes(), self.x.tobytes(), self.begin, self.phase.tobytes()))
-        else:
-            return hash((self.z.tobytes(), self.x.tobytes(), self.phase.tobytes()))
+            m.update(str(self.begin).encode())
+        m.update(self.phase.tobytes())
+        # take the first 8 bytes for a 64-bit integer
+        return int.from_bytes(m.digest()[:8], byteorder="little", signed=False)
 
     def __hash__(self):
         return self.hash()

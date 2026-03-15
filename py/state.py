@@ -4,6 +4,7 @@ from pauli import Pauli
 from stab import StabilizerGroup, StabilizerGroupEnergies, is_in_group
 import tqdm
 
+
 type_index = tp.Tuple[int, int]
 tot_count = 0
 
@@ -407,7 +408,7 @@ class StateMachine:
 
     def evolve(self):
         new_state_dict = {}
-        for state in tqdm.tqdm(self.state_dict.values()):
+        for state in (self.state_dict.values()):
             new_states = self.evolve_single(state)
             for new_state in new_states:
                 hash_value = hash(new_state)
@@ -581,7 +582,7 @@ def generate_Sright_all(H: Hamiltonian) -> tp.Dict[int, type_Sright]:
         stabs_dict = {key: evolve_stab(stab, paulis) for key, stab in stabs.items()}
         stabs, stabs_maps = get_map_from_stabs(stabs, stabs_dict)
         Sright_all[m] = (stabs, stabs_maps)
-        print(m, len(stabs))
+        #print(m, len(stabs))
     return Sright_all
 
 

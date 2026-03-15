@@ -4,7 +4,6 @@ import linear
 from utils import inttype, zerosint2, randomint2
 from pauli import Pauli
 
-
 class StabilizerGroup:
     def __init__(self, Ps: Pauli, canonicalized=False):
         '''
